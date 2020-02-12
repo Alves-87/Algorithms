@@ -1,5 +1,9 @@
 // You need to complete this program for a part of your first project.
-
+/*
+   Alexis Alves
+   Algorithms Project 1 Part 1
+   Student ID: 4147004
+*/
 // Standard libraries
 #include <string>
 #include <iostream>

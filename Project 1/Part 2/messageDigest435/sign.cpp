@@ -1,3 +1,9 @@
+/*
+   Alexis Alves
+   Algorithms Project 1 Part 3
+   Student ID: 4147004
+*/
+
 // /***
 //    prepared for CS435 Project 1 part 2
 // **/
@@ -110,7 +116,7 @@ int main(int argc, char *argv[])
          while(File >> string_e >> string_n ){}
          File.close();
 
-         //Grab the values of e and n
+         //Convert string files to BigUnsigned
          e = stringToBigUnsigned(string_e);
          n = stringToBigUnsigned(string_n);
        
@@ -119,7 +125,7 @@ int main(int argc, char *argv[])
          encryptedSignature = modexp(signature, e, n);
          std::cout << "Encrypted signature: " << encryptedSignature << std::endl;
 
-         //Compare hash with the "encrypted" signature
+         //Compare
          if (encryptedSignature == hash)
          std::cout << "File authentic " << std::endl;
          else
