@@ -52,11 +52,11 @@ bool IsRelPrime(BigUnsigned x, BigUnsigned y){
 }
 BigUnsigned Find_e(BigUnsigned x,BigUnsigned y){
    bool RelativePrimeFlag = false;
-   x = RandomBig(101);
+   x = RandomBig(100);
    RelativePrimeFlag = IsRelPrime(x,y);
    while(!RelativePrimeFlag)
    {
-      x = RandomBig(101);
+      x = RandomBig(100);
       RelativePrimeFlag = IsRelPrime(x,y);
    }  
    return x;

@@ -24,7 +24,10 @@ std::string convertToString(char* a)
  
 int main(int argc, char *argv[])
 {
-   if (argc != 3 || (argv[1][0]!='s' && argv[1][0]!='v')) 
+   std::cout << "agrments " << argv[0][0] << " " << argv[1][0] 
+             << " " << argv[2][0]  <<  " " <<  argc << std::endl;
+
+   if (/*argc != 3 || */ (argv[1][0]!='s' && argv[1][0]!='v')) 
       std::cout << "wrong format! should be \"a.exe s filename\"";
    else {
       std::string filename = argv[2];
@@ -81,6 +84,7 @@ int main(int argc, char *argv[])
          std::cout << "Signing Hash\n";
          //Sign Hash
          BigUnsigned signed_Hash = modexp(hash, d, n);
+         std::cout << signed_Hash << std::endl;
          //Save Signed Hash
          std::ofstream signature_File;
          signature_File.open("file.txt.signature", std::ofstream::out | std::ofstream::trunc);
