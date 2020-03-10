@@ -16,10 +16,19 @@
 
 using namespace std;
 
-struct Point 
-{ 
-	int x, y; 
-}; 
+struct Point{
+    int x, y;
+};
+
+//Global variables
+int count = 0;
+Point p0;
+
+//Specifics for Quick Hull
+#define iPair std::pair<int, int>
+std::set<iPair> quick_hull;
+std::vector<Point> quick_hull_vector;
+
 
 // To find orientation of ordered triplet (p, q, r). 
 // The function returns following values 
@@ -115,7 +124,24 @@ int main(int argc, char *argv[])
 
       std::string outputFile = "";
       //read your data points from dataFile (see class example for the format)
+      std::ifstream file;
+      file.open(dataFilename.c_str());
+      std::vector<Point> points;
+      std::vector<iPair> quick_points;
       
+      if (file.is_open())
+      {
+          int x, y;
+          while (file >> x >> y)
+          {
+              Point myPoint;
+              myPoint.x = x;
+              myPoint.y = y;
+              points.push_back(myPoint);
+              quick_points.push_back(*new iPair(x, y));
+          }
+      }
+
       if (algType[0]=='G') {
          //call your Graham Scan algorithm to solve the problem
          outputFile = "hull_G.txt";
