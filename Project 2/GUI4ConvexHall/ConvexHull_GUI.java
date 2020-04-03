@@ -264,7 +264,30 @@ public class ConvexHull_GUI extends JPanel
       ConvexHull_GUI CH = new ConvexHull_GUI();
       boolean generateData = false;
       if (generateData){
-         CH.testFileGen("test.txt", "triangle", 1000); //generate data points
+         CH.testFileGen("test_triangle_10.txt", "triangle", 10); //generate data points
+         CH.testFileGen("test_triangle_100.txt", "triangle", 100);
+         CH.testFileGen("test_triangle_1000.txt", "triangle", 1000);
+         CH.testFileGen("test_triangle_10000.txt", "triangle", 10000);
+         CH.testFileGen("test_triangle_100000.txt", "triangle", 100000);
+         CH.testFileGen("test_triangle_1000000.txt", "triangle", 1000000);
+         CH.testFileGen("test_onCircle_10.txt", "onCircle", 10); //generate data points
+         CH.testFileGen("test_onCircle_100.txt", "onCircle", 100);
+         CH.testFileGen("test_onCircle_1000.txt", "onCircle", 1000);
+         CH.testFileGen("test_onCircle_10000.txt", "onCircle", 10000);
+         CH.testFileGen("test_onCircle_100000.txt", "onCircle", 100000);
+         CH.testFileGen("test_onCircle_1000000.txt", "onCircle", 1000000);
+         CH.testFileGen("test_rectangle_10.txt", "rectangle", 10); //generate data points
+         CH.testFileGen("test_rectangle_100.txt", "rectangle", 100);
+         CH.testFileGen("test_rectangle_1000.txt", "rectangle", 1000);
+         CH.testFileGen("test_rectangle_10000.txt", "rectangle", 10000);
+         CH.testFileGen("test_rectangle_100000.txt", "rectangle", 100000);
+         CH.testFileGen("test_rectangle_1000000.txt", "rectangle", 1000000);
+         CH.testFileGen("test_circle_10.txt", "circle", 10); //generate data points
+         CH.testFileGen("test_circle_100.txt", "circle", 100);
+         CH.testFileGen("test_circle_1000.txt", "circle", 1000);
+         CH.testFileGen("test_circle_10000.txt", "circle", 10000);
+         CH.testFileGen("test_circle_100000.txt", "circle", 100000);
+         CH.testFileGen("test_circle_1000000.txt", "circle", 1000000);
          System.out.println("done");
          System.exit(0);
       }
